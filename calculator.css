@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {}
+
+input {
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+}
+
+button {
+    display: inline;
+    width: 2%;
+    height: 30px;
+}
+
+.box {
+    padding: 5px;
+    margin: auto;
+}

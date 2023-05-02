@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Online Quiz System</title>
+</head>
+
+<body>
+    <h1>Welcome to the Online Quiz System</h1>
+    <form>
+        <h2>Question 1</h2>
+        <p>What is the capital city of France?</p>
+        <input type="radio" name="q1" value="a">a) London<br>
+        <input type="radio" name="q1" value="b">b) Paris<br>
+        <input type="radio" name="q1" value="c">c) Berlin<br>
+        <input type="radio" name="q1" value="d">d) Madrid<br>
+
+        <h2>Question 2</h2>
+        <p>What is the highest mountain in the world?</p>
+        <input type="radio" name="q2" value="a">a) Mount Kilimanjaro<br>
+        <input type="radio" name="q2" value="b">b) Mount Everest<br>
+        <input type="radio" name="q2" value="c">c) Mount McKinley<br>
+        <input type="radio" name="q2" value="d">d) Mount Fuji<br>
+
+        <h2>Question 3</h2>
+        <p>What is the smallest continent in the world?</p>
+        <input type="radio" name="q3" value="a">a) Asia<br>
+        <input type="radio" name="q3" value="b">b) Africa<br>
+        <input type="radio" name="q3" value="c">c) Europe<br>
+        <input type="radio" name="q3" value="d">d) Australia<br>
+        <button>submit</button>
+
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector('button').onclick = function() {
+                let score = 0;
+                let q1 = document.querySelector('input[name="q1"]:checked').value;
+                let q2 = document.querySelector('input[name="q2"]:checked').value;
+                let q3 = document.querySelector('input[name="q3"]:checked').value;
+
+                if (q1 === "b") {
+                    score++;
+                }
+
+                if (q2 === "b") {
+                    score++;
+                }
+
+                if (q3 === "d") {
+                    score++;
+                }
+
+                alert(`You scored ${score} out of 3.
+                    the correct answer for question 1 is paris (b)
+                    the correct answer for question 2 is Mount Everist (b)
+                    the correct answer for estion 3 is Australia (d) `);
+
+            };
+        });
+    </script>
+</body>
+
+</html>
